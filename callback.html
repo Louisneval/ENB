@@ -1,0 +1,12 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connection finished</title><link rel="stylesheet" href="style.css"></head><body>
+<h1>Bank login finished</h1>
+<p>Copy the full address below and paste it into LifeOS → Settings → Banks → <b>Finish connection</b>.</p>
+<textarea id="u" readonly></textarea><br>
+<button id="b">Copy</button>
+<p id="m"></p>
+<p style="font-size:13px;opacity:.7">This page does not send or store anything. The address is only shown here in your own browser.</p>
+<script>
+var u=document.getElementById('u');u.value=location.href;
+document.getElementById('b').onclick=function(){u.select();document.execCommand('copy');document.getElementById('m').textContent='Copied ✓';};
+</script></body></html>
